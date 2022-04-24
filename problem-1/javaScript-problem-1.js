@@ -14,6 +14,19 @@ function arraySort(array, num ) {
   //indicated by num.
   const newArray = arrayOfColors.slice(0, num);
 
+  if( array === null || num === null ) {
+  	return "You're input should be ('array', 'num'). Please try again.";  	
+  }
+
+  if (num < 0) {
+  	return "You're number should be greater than zero";
+  }
+
+  if (num > array.length) {
+  	return "We only have " + array.length + " items, please try again." ;
+  }
+
+
   console.log(newArray);
   return array;
 }
