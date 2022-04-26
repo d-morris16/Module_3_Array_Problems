@@ -12,7 +12,8 @@ function arrayFilter(array) {
   //We arrow function into the indexOf function to have it only accept the first 
   //occurance of the array element.
   array.filter((item, index) => array.indexOf(item) === index);
-  return array;
+  return arrayOfStrings;
 }
               
-console.log(arrayFilter(arrayOfStrings));
+console.log(arrayOfStrings.filter(
+  (item, index) => arrayOfStrings.indexOf(item) === index));
