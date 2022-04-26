@@ -11,18 +11,12 @@ const arrayOfNum = [35, 59, -48, -3, 89, -2, 0];
 
 function numberSort (array) {
   
+ if (array === null) {
+    return "Please input an array for the function to sort";
+  }
    //In order to get the sort method to correctly sort the integers, we need to use the 
   //compareFunction to compare the values from greater or less. 
   console.log(array.sort(function(a, b){return b-a}));
-  
-  if (array === null) {
-    return "Please input an array for the function to sort";
-  }
-  
-  if (item => typeof item === 'number') {
-    return "Please input an array of integers for the function to sort";
-  }
-  
 }
 
 numberSort(arrayOfNum);
