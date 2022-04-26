@@ -11,9 +11,7 @@ const arrayOfStrings = ["Rock", "Paper", "Scissors", "Rock", "Paper", "Paper"];
 function arrayFilter(array) {
   //We arrow function into the indexOf function to have it only accept the first 
   //occurance of the array element.
-  array.filter((item, index) => array.indexOf(item) === index);
-  return arrayOfStrings;
+  return array.filter((item, index) => array.indexOf(item) === index);
 }
               
-console.log(arrayOfStrings.filter(
-  (item, index) => arrayOfStrings.indexOf(item) === index));
+console.log(arrayFilter(arrayOfStrings));
