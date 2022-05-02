@@ -3,15 +3,26 @@
 /*
 Step 1: Create a function that will take in an array of elements. 
 Step 2: Create an array of elements.
-Step 3: Use the filter() method to reduce the duplicate items from the array. 
+Step 3: Use create a for loop that will loop through each array element for uniqueness.
+Step 4: Using both includes() & push() will remove any duplicate items in the original 
+array.
+Step 5:Print the new array into an empty array variable.
 */
 
-const arrayOfStrings = ["Rock", "Paper", "Scissors", "Rock", "Paper", "Paper"];
+const arrayOfValues = ["Rock", "Paper", "Scissors", "Rock", "Paper", "Paper"];
 
-function arrayFilter(array) {
-  //We arrow function into the indexOf function to have it only accept the first 
-  //occurance of the array element.
-  return array.filter((item, index) => array.indexOf(item) === index);
-}
-              
-console.log(arrayFilter(arrayOfStrings));
+function dupArrayRemover(array) {
+  let newArray = [];
+  
+  for(let i = 0; i < array.length; i++) {
+    
+    if(!newArray.includes(array[i])) {
+      newArray.push(array[i])
+    };
+    
+  };
+  
+  return newArray;
+};
+
+console.log(dupArrayRemover(arrayOfValues));
