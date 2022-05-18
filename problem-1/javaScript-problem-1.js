@@ -12,8 +12,7 @@ const arrayOfColors = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Vi
 function arraySort(array, num ) {
   //This constant will start at the first position in the array and end on the position
   //indicated by num.
-  const newArray = arrayOfColors.slice(0, num);
-
+  
   if( array === null || num === null ) {
   	return "You're input should be ('array', 'num'). Please try again.";  	
   }
@@ -26,6 +25,7 @@ function arraySort(array, num ) {
   	return "We only have " + array.length + " items, please try again." ;
   }
 
+  const newArray = arrayOfColors.slice(0, num);
 
   console.log(newArray);
   return array;
